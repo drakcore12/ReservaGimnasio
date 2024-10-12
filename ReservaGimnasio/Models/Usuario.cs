@@ -1,12 +1,9 @@
-namespace ReservaGimnasio.Models
+public class Usuario
 {
-    public class Usuario
-    {
-        public int Id { get; set; }
-        public string Nombre { get; set; }
-        public string CorreoElectronico { get; set; }
-        public string Contraseña { get; set; }
-        public string Telefono { get; set; }
-        public int RolId { get; set; } // Cliente o Administrador
-    }
+    public int Id { get; set; }
+    public string Nombre { get; set; } = string.Empty; // Inicialización para evitar null
+    public string CorreoElectronico { get; set; } = string.Empty; // Inicialización para evitar null
+    public string Contraseña { get; set; } = string.Empty; // Inicialización para evitar null
+    public string Telefono { get; set; } = string.Empty; // Inicialización para evitar null
+    public int RolId { get; set; }
 }

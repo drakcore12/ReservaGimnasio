@@ -45,17 +45,19 @@ namespace ReservaGimnasio.Services
                 }
             }
         }
-
         public static List<Reserva> ObtenerReservasPorUsuario(int usuarioId)
         {
             List<Reserva> reservas = new List<Reserva>();
             using (SqlConnection con = new SqlConnection(Config.ConnectionString))
             {
-                string query = @"SELECT Reservas.*, TiposDeClase.Nombre AS NombreClase, Clases.FechaHora
-                         FROM Reservas
-                         INNER JOIN Clases ON Reservas.ClaseId = Clases.Id
-                         INNER JOIN TiposDeClase ON Clases.TipoClaseId = TiposDeClase.Id
-                         WHERE Reservas.UsuarioId = @UsuarioId";
+                string query = @"SELECT r.Id, r.FechaReserva, tc.Nombre AS NombreClase, c.FechaHora, 
+                         i.Nombre AS NombreInstructor, c.Duracion
+                         FROM Reservas r
+                         INNER JOIN Clases c ON r.ClaseId = c.Id
+                         INNER JOIN TiposDeClase tc ON c.TipoClaseId = tc.Id
+                         INNER JOIN Instructores i ON c.InstructorId = i.Id
+                         WHERE r.UsuarioId = @UsuarioId";
+
                 SqlCommand cmd = new SqlCommand(query, con);
                 cmd.Parameters.AddWithValue("@UsuarioId", usuarioId);
 
@@ -67,14 +69,17 @@ namespace ReservaGimnasio.Services
                     reservas.Add(new Reserva
                     {
                         Id = (int)reader["Id"],
-                        UsuarioId = (int)reader["UsuarioId"],
-                        ClaseId = (int)reader["ClaseId"],
-                        FechaReserva = (DateTime)reader["FechaReserva"]
+                        FechaReserva = (DateTime)reader["FechaReserva"],
+                        NombreClase = reader["NombreClase"].ToString(),
+                        FechaHora = (DateTime)reader["FechaHora"],
+                        NombreInstructor = reader["NombreInstructor"].ToString(),  // Nueva propiedad para el instructor
+                        Duracion = (int)reader["Duracion"]  // Nueva propiedad para la duración
                     });
                 }
             }
             return reservas;
         }
+
 
         public static void CancelarReserva(int reservaId)
         {

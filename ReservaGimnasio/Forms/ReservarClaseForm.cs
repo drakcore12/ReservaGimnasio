@@ -19,7 +19,45 @@ namespace ReservaGimnasio.Forms
         {
             var clases = ClaseService.ObtenerClasesDisponibles();
             dataGridViewClases.DataSource = clases;
+
+            // Ocultar las columnas de ID
+            if (dataGridViewClases.Columns["Id"] != null)
+            {
+                dataGridViewClases.Columns["Id"].Visible = false;
+            }
+            if (dataGridViewClases.Columns["InstructorId"] != null)
+            {
+                dataGridViewClases.Columns["InstructorId"].Visible = false;
+            }
+            if (dataGridViewClases.Columns["TipoClaseId"] != null)
+            {
+                dataGridViewClases.Columns["TipoClaseId"].Visible = false;
+            }
+
+            // Cambiar los encabezados de las columnas
+            if (dataGridViewClases.Columns["NombreInstructor"] != null)
+            {
+                dataGridViewClases.Columns["NombreInstructor"].HeaderText = "Instructor";
+            }
+            if (dataGridViewClases.Columns["NombreTipoClase"] != null)
+            {
+                dataGridViewClases.Columns["NombreTipoClase"].HeaderText = "Clase";
+            }
+            if (dataGridViewClases.Columns["FechaHora"] != null)
+            {
+                dataGridViewClases.Columns["FechaHora"].HeaderText = "Fecha";
+            }
+            if (dataGridViewClases.Columns["Duracion"] != null)
+            {
+                dataGridViewClases.Columns["Duracion"].HeaderText = "Duración";
+            }
+            if (dataGridViewClases.Columns["CupoMaximo"] != null)
+            {
+                dataGridViewClases.Columns["CupoMaximo"].HeaderText = "Cupo Máximo";
+            }
         }
+
+
 
         private void btnReservar_Click(object sender, EventArgs e)
         {
