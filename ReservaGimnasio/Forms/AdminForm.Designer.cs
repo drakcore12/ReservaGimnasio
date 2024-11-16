@@ -22,77 +22,77 @@
 
         private void InitializeComponent()
         {
-            this.lblBienvenida = new System.Windows.Forms.Label();
-            this.btnGestionarClases = new System.Windows.Forms.Button();
-            this.btnGestionarUsuarios = new System.Windows.Forms.Button();
-            this.btnVerEstadisticas = new System.Windows.Forms.Button();
-            this.btnCerrarSesion = new System.Windows.Forms.Button();
-            this.SuspendLayout();
+            lblBienvenida = new Label();
+            btnGestionarClases = new Button();
+            btnGestionarUsuarios = new Button();
+            btnVerEstadisticas = new Button();
+            btnCerrarSesion = new Button();
+            SuspendLayout();
             // 
             // lblBienvenida
             // 
-            this.lblBienvenida.AutoSize = true;
-            this.lblBienvenida.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblBienvenida.Location = new System.Drawing.Point(30, 30);
-            this.lblBienvenida.Name = "lblBienvenida";
-            this.lblBienvenida.Size = new System.Drawing.Size(129, 25);
-            this.lblBienvenida.TabIndex = 0;
-            this.lblBienvenida.Text = "¡Bienvenido!";
+            lblBienvenida.AutoSize = true;
+            lblBienvenida.Font = new Font("Microsoft Sans Serif", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            lblBienvenida.Location = new Point(30, 30);
+            lblBienvenida.Name = "lblBienvenida";
+            lblBienvenida.Size = new Size(158, 29);
+            lblBienvenida.TabIndex = 0;
+            lblBienvenida.Text = "¡Bienvenido!";
             // 
             // btnGestionarClases
             // 
-            this.btnGestionarClases.Location = new System.Drawing.Point(35, 80);
-            this.btnGestionarClases.Name = "btnGestionarClases";
-            this.btnGestionarClases.Size = new System.Drawing.Size(150, 40);
-            this.btnGestionarClases.TabIndex = 1;
-            this.btnGestionarClases.Text = "Gestionar Clases";
-            this.btnGestionarClases.UseVisualStyleBackColor = true;
-            this.btnGestionarClases.Click += new System.EventHandler(this.btnGestionarClases_Click);
+            btnGestionarClases.Location = new Point(35, 80);
+            btnGestionarClases.Name = "btnGestionarClases";
+            btnGestionarClases.Size = new Size(150, 40);
+            btnGestionarClases.TabIndex = 1;
+            btnGestionarClases.Text = "Gestionar Clases";
+            btnGestionarClases.UseVisualStyleBackColor = true;
+            btnGestionarClases.Click += btnGestionarClases_Click;
             // 
             // btnGestionarUsuarios
             // 
-            this.btnGestionarUsuarios.Location = new System.Drawing.Point(35, 140);
-            this.btnGestionarUsuarios.Name = "btnGestionarUsuarios";
-            this.btnGestionarUsuarios.Size = new System.Drawing.Size(150, 40);
-            this.btnGestionarUsuarios.TabIndex = 2;
-            this.btnGestionarUsuarios.Text = "Gestionar Usuarios";
-            this.btnGestionarUsuarios.UseVisualStyleBackColor = true;
-            this.btnGestionarUsuarios.Click += new System.EventHandler(this.btnGestionarUsuarios_Click);
+            btnGestionarUsuarios.Location = new Point(35, 140);
+            btnGestionarUsuarios.Name = "btnGestionarUsuarios";
+            btnGestionarUsuarios.Size = new Size(150, 40);
+            btnGestionarUsuarios.TabIndex = 2;
+            btnGestionarUsuarios.Text = "Gestionar Usuarios";
+            btnGestionarUsuarios.UseVisualStyleBackColor = true;
+            btnGestionarUsuarios.Click += btnGestionarUsuarios_Click;
             // 
             // btnVerEstadisticas
             // 
-            this.btnVerEstadisticas.Location = new System.Drawing.Point(35, 200);
-            this.btnVerEstadisticas.Name = "btnVerEstadisticas";
-            this.btnVerEstadisticas.Size = new System.Drawing.Size(150, 40);
-            this.btnVerEstadisticas.TabIndex = 3;
-            this.btnVerEstadisticas.Text = "Ver Estadísticas";
-            this.btnVerEstadisticas.UseVisualStyleBackColor = true;
-            this.btnVerEstadisticas.Click += new System.EventHandler(this.btnVerEstadisticas_Click);
+            btnVerEstadisticas.Location = new Point(35, 200);
+            btnVerEstadisticas.Name = "btnVerEstadisticas";
+            btnVerEstadisticas.Size = new Size(150, 40);
+            btnVerEstadisticas.TabIndex = 3;
+            btnVerEstadisticas.Text = "Ver Estadísticas";
+            btnVerEstadisticas.UseVisualStyleBackColor = true;
+            btnVerEstadisticas.Click += btnVerEstadisticas_Click;
             // 
             // btnCerrarSesion
             // 
-            this.btnCerrarSesion.Location = new System.Drawing.Point(35, 260);
-            this.btnCerrarSesion.Name = "btnCerrarSesion";
-            this.btnCerrarSesion.Size = new System.Drawing.Size(150, 40);
-            this.btnCerrarSesion.TabIndex = 4;
-            this.btnCerrarSesion.Text = "Cerrar Sesión";
-            this.btnCerrarSesion.UseVisualStyleBackColor = true;
-            this.btnCerrarSesion.Click += new System.EventHandler(this.btnCerrarSesion_Click);
+            btnCerrarSesion.Location = new Point(35, 260);
+            btnCerrarSesion.Name = "btnCerrarSesion";
+            btnCerrarSesion.Size = new Size(150, 40);
+            btnCerrarSesion.TabIndex = 4;
+            btnCerrarSesion.Text = "Cerrar Sesión";
+            btnCerrarSesion.UseVisualStyleBackColor = true;
+            btnCerrarSesion.Click += btnCerrarSesion_Click;
             // 
             // AdminForm
             // 
-            this.ClientSize = new System.Drawing.Size(400, 330);
-            this.Controls.Add(this.btnCerrarSesion);
-            this.Controls.Add(this.btnVerEstadisticas);
-            this.Controls.Add(this.btnGestionarUsuarios);
-            this.Controls.Add(this.btnGestionarClases);
-            this.Controls.Add(this.lblBienvenida);
-            this.Name = "AdminForm";
-            this.Text = "Panel Administrativo - Reserva Gimnasio";
-            this.Load += new System.EventHandler(this.AdminForm_Load);
-            this.ResumeLayout(false);
-            this.PerformLayout();
-
+            BackColor = Color.Brown;
+            ClientSize = new Size(400, 330);
+            Controls.Add(btnCerrarSesion);
+            Controls.Add(btnVerEstadisticas);
+            Controls.Add(btnGestionarUsuarios);
+            Controls.Add(btnGestionarClases);
+            Controls.Add(lblBienvenida);
+            Name = "AdminForm";
+            Text = "Panel Administrativo - Reserva Gimnasio";
+            Load += AdminForm_Load;
+            ResumeLayout(false);
+            PerformLayout();
         }
 
         #endregion

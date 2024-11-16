@@ -26,84 +26,82 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.lblCorreo = new System.Windows.Forms.Label();
-            this.lblContraseña = new System.Windows.Forms.Label();
-            this.txtCorreo = new System.Windows.Forms.TextBox();
-            this.txtContraseña = new System.Windows.Forms.TextBox();
-            this.btnIniciarSesion = new System.Windows.Forms.Button();
-            this.linkRegistro = new System.Windows.Forms.LinkLabel();
-            this.SuspendLayout();
+            lblCorreo = new Label();
+            lblContraseña = new Label();
+            txtCorreo = new TextBox();
+            txtContraseña = new TextBox();
+            btnIniciarSesion = new Button();
+            linkRegistro = new LinkLabel();
+            SuspendLayout();
             // 
             // lblCorreo
             // 
-            this.lblCorreo.AutoSize = true;
-            this.lblCorreo.Location = new System.Drawing.Point(30, 30);
-            this.lblCorreo.Name = "lblCorreo";
-            this.lblCorreo.Size = new System.Drawing.Size(125, 17);
-            this.lblCorreo.TabIndex = 0;
-            this.lblCorreo.Text = "Correo electrónico:";
+            lblCorreo.AutoSize = true;
+            lblCorreo.Location = new Point(30, 30);
+            lblCorreo.Name = "lblCorreo";
+            lblCorreo.Size = new Size(161, 25);
+            lblCorreo.TabIndex = 0;
+            lblCorreo.Text = "Correo electrónico:";
             // 
             // lblContraseña
             // 
-            this.lblContraseña.AutoSize = true;
-            this.lblContraseña.Location = new System.Drawing.Point(30, 80);
-            this.lblContraseña.Name = "lblContraseña";
-            this.lblContraseña.Size = new System.Drawing.Size(81, 17);
-            this.lblContraseña.TabIndex = 1;
-            this.lblContraseña.Text = "Contraseña:";
+            lblContraseña.AutoSize = true;
+            lblContraseña.Location = new Point(30, 80);
+            lblContraseña.Name = "lblContraseña";
+            lblContraseña.Size = new Size(105, 25);
+            lblContraseña.TabIndex = 1;
+            lblContraseña.Text = "Contraseña:";
             // 
             // txtCorreo
             // 
-            this.txtCorreo.Location = new System.Drawing.Point(160, 27);
-            this.txtCorreo.Name = "txtCorreo";
-            this.txtCorreo.Size = new System.Drawing.Size(200, 22);
-            this.txtCorreo.TabIndex = 2;
+            txtCorreo.Location = new Point(197, 27);
+            txtCorreo.Name = "txtCorreo";
+            txtCorreo.Size = new Size(200, 31);
+            txtCorreo.TabIndex = 2;
             // 
             // txtContraseña
             // 
-            this.txtContraseña.Location = new System.Drawing.Point(160, 77);
-            this.txtContraseña.Name = "txtContraseña";
-            this.txtContraseña.PasswordChar = '*';
-            this.txtContraseña.Size = new System.Drawing.Size(200, 22);
-            this.txtContraseña.TabIndex = 3;
+            txtContraseña.Location = new Point(197, 77);
+            txtContraseña.Name = "txtContraseña";
+            txtContraseña.PasswordChar = '*';
+            txtContraseña.Size = new Size(200, 31);
+            txtContraseña.TabIndex = 3;
             // 
             // btnIniciarSesion
             // 
-            this.btnIniciarSesion.Location = new System.Drawing.Point(160, 120);
-            this.btnIniciarSesion.Name = "btnIniciarSesion";
-            this.btnIniciarSesion.Size = new System.Drawing.Size(100, 30);
-            this.btnIniciarSesion.TabIndex = 4;
-            this.btnIniciarSesion.Text = "Iniciar Sesión";
-            this.btnIniciarSesion.UseVisualStyleBackColor = true;
-            this.btnIniciarSesion.Click += new System.EventHandler(this.btnIniciarSesion_Click);
+            btnIniciarSesion.Location = new Point(183, 137);
+            btnIniciarSesion.Name = "btnIniciarSesion";
+            btnIniciarSesion.Size = new Size(100, 30);
+            btnIniciarSesion.TabIndex = 4;
+            btnIniciarSesion.Text = "Iniciar Sesión";
+            btnIniciarSesion.UseVisualStyleBackColor = true;
+            btnIniciarSesion.Click += btnIniciarSesion_Click;
             // 
             // linkRegistro
             // 
-            this.linkRegistro.AutoSize = true;
-            this.linkRegistro.Location = new System.Drawing.Point(160, 170);
-            this.linkRegistro.Name = "linkRegistro";
-            this.linkRegistro.Size = new System.Drawing.Size(117, 17);
-            this.linkRegistro.TabIndex = 5;
-            this.linkRegistro.TabStop = true;
-            this.linkRegistro.Text = "Crear una cuenta";
-            this.linkRegistro.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkRegistro_LinkClicked);
+            linkRegistro.AutoSize = true;
+            linkRegistro.Location = new Point(160, 170);
+            linkRegistro.Name = "linkRegistro";
+            linkRegistro.Size = new Size(144, 25);
+            linkRegistro.TabIndex = 5;
+            linkRegistro.TabStop = true;
+            linkRegistro.Text = "Crear una cuenta";
+            linkRegistro.LinkClicked += linkRegistro_LinkClicked;
             // 
             // LoginForm
             // 
-            this.AcceptButton = this.btnIniciarSesion;
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
-            this.ClientSize = new System.Drawing.Size(400, 220);
-            this.Controls.Add(this.linkRegistro);
-            this.Controls.Add(this.btnIniciarSesion);
-            this.Controls.Add(this.txtContraseña);
-            this.Controls.Add(this.txtCorreo);
-            this.Controls.Add(this.lblContraseña);
-            this.Controls.Add(this.lblCorreo);
-            this.Name = "LoginForm";
-            this.Text = "Inicio de Sesión - Reserva Gimnasio";
-            this.ResumeLayout(false);
-            this.PerformLayout();
-
+            AcceptButton = btnIniciarSesion;
+            ClientSize = new Size(462, 220);
+            Controls.Add(linkRegistro);
+            Controls.Add(btnIniciarSesion);
+            Controls.Add(txtContraseña);
+            Controls.Add(txtCorreo);
+            Controls.Add(lblContraseña);
+            Controls.Add(lblCorreo);
+            Name = "LoginForm";
+            Text = "Inicio de Sesión - Reserva Gimnasio";
+            ResumeLayout(false);
+            PerformLayout();
         }
 
         #endregion
